@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+        {% block title %}Upcoming Events{% endblock %}
+
+{% block content %}
+<h2><u>Here is a list of upcoming events:</u></h2>
+    {% for event in events %}
+        <div class="post block">
+
+           <br>
+            <DL>
+
+                <span style="background-color: #FFFF00">Date:</span> <DT><h4 class="subtitle">{{ event.date }}</h4> </DT>
+                <ul>
+               <DD><span style="background-color: #FFFF00">Speaker:</span> <li>{{event.description}}</li></DD>
+                <DD><span style="background-color: #FFFF00">Description:</span><li>{{event.guestSpeaker}}</li></DD>
+            </ul>
+
+                </DL>
+
+
+
+
+
+        </div>
+    {% endfor %}
+{% endblock %}

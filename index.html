@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h3>Contact Form</h3>
+
+<form method="post" action="{% url 'index' %}">
+	{% csrf_token %}
+	<textarea name="personname" placeholder="Name..."></textarea>
+	<br>
+	<textarea name="email" placeholder="Email..."></textarea>
+	<br>
+	<textarea name="message" placeholder="Message..."></textarea>
+	<input type="submit">
+</form>
+{% endblock %}
+<!---
+
+
+<h3>Contact Form</h3>
+
+<form method="post" action="{% url 'index' %}">
+	{% csrf_token %}
+	<textarea name="personname" placeholder="Name..."></textarea>
+	<br>
+	<textarea name="email" placeholder="Email..."></textarea>
+	<br>
+	<textarea name="message" placeholder="Message..."></textarea>
+	<input type="submit" onclick="return submitText();" value="Submit"/>
+
+
+
+	<script type="text/javascript">
+        function submitText() {
+            alert('Form submitted');
+            return false;
+        }
+    </script>
+
+	<p> Click the submit button to send your response to Dhruv</p>
+</form>
+-->

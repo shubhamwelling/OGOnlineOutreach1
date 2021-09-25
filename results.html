@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for result in results %}
+        <div class="post block">
+            <h2 class="subtitle">{{result.option}}||{{ result.suggestion }}</h2>
+
+
+
+        </div>
+    {% endfor %}
+{% endblock %}
