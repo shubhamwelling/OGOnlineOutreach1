@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+        {% block title %}FAQ{% endblock %}
+
+{% block content %}
+<h2><u>Here is a list of Frequently Asked Questions:</u></h2>
+    {% for faq in faqs %}
+        <div class="post block">
+
+           <br>
+            <DL>
+
+                <span style="background-color: #FFFF00">Question:</span> <DT><h4 class="subtitle">{{ faq.question }}</h4> </DT>
+                <ul>
+               <DD><span style="background-color: #FFFF00">Answer:</span> <li>{{faq.answer}}</li></DD>
+
+            </ul>
+
+                </DL>
+
+
+
+
+
+        </div>
+    {% endfor %}
+{% endblock %}
