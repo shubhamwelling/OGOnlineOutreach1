@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<form class="d-flex" method=POST action="{%url 'search' %}">
+        {% csrf_token %}
+                <input class="form-control me-2" type="search"placeholder="Search"aria-label="Search" name="searched">
+
+            </form>
+    {% for post in posts %}
+<style> img{border: 5px solid #555;}</style>
+        <div class="post block">
+
+            <h2 class="subtitle"><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a> </h2>
+            <div class="pull-right">
+                <h4><u>Key Takeaways</u></h4>
+            <ol>
+  <li>{{post.takeaway_One}}</li>
+  <li>{{post.takeaway_Two}}</li>
+  <li>{{post.takeaway_Three}}</li>
+</ol>
+        </div>
+            <img class="profile-pic" width="160" height="160" src="{{post.picture.url}}">
+            <br>
+            <small>Posted at {{ post.date_added }}</small>
+
+            <p>{{ post.intro }}</p>
+            <a href="{{post.url}}">Associated URL</a>
+            <br>
+
+
+
+        </div>
+
+
+    {% endfor %}
+{% endblock %}

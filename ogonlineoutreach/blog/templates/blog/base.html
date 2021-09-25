@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Open Gears Online Outreach</title>
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div class="navbar-brand">
+                <a href="{% url 'home' %}" class="navbar-item"><strong> <b>Open Gears  </b>   </strong></a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                  <a href="{% url 'home' %}" class="navbar-item"> Home    </a> &nbsp &nbsp &nbsp
+                 <a href="{% url 'frontpage' %}" class="navbar-item"> Blog    </a> &nbsp &nbsp &nbsp
+                <a href="{% url 'events' %}" class="navbar-item"> Upcoming Events    </a> &nbsp &nbsp &nbsp
+
+
+                <a href="{% url 'faq' %}" class="navbar-item"> FAQ    </a> &nbsp &nbsp &nbsp
+                <a href="{%url 'second' %}"class="navbar-item"> Contact   </a> &nbsp &nbsp &nbsp
+                <a href="{% url 'feedback' %}" class="navbar-item"> Leave Feedback    </a> &nbsp &nbsp &nbsp
+                <a href="{% url 'results' %}" class="navbar-item"> View(Restricted)    </a> &nbsp &nbsp &nbsp
+
+
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>
+    </body>
+</html>
